@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Banner</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            display: none; 
+        }
+
+        .cookie-banner p {
+            margin: 0 0 10px;
+        }
+
+        .cookie-banner button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
+           Erfahren Sie mehr in unserer <a href="#" style="color: #4CAF50; text-decoration: underline;">Datenschutzerklärung</a>.</p>
+        <button onclick="acceptCookies()">Akzeptieren</button>
+    </div>
+
+    <script>
+        
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const cookieAccepted = localStorage.getItem('cookieAccepted');
+
+            if (!cookieAccepted) {
+                banner.style.display = 'block';
+            }
+        }
+
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieAccepted', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        
+        showCookieBanner();
+    </script>
+
+</body>
+</html>
