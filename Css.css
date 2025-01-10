@@ -56,8 +56,13 @@ h2{
     font-size: 30px;
     text-align: center;
 }
-p{
+h3{
+  font-size: 20px;
   text-align: center;
+}
+p{
+    text-allign: center;
+  
 }
 
 
@@ -92,6 +97,9 @@ a{
   'wght' 400,
   'GRAD' 0,
   'opsz' 408
+}
+form{
+  text-align: center;
 }
 
 
