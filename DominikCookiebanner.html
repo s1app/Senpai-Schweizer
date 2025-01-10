@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Banner</title>
     <style>
-       
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        
         .cookie-banner {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
             z-index: 1000;
-            display: none; 
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .cookie-banner p {
@@ -31,7 +31,7 @@
         }
 
         .cookie-banner button {
-            background-color: #4CAF50;
+            background-color: #e3dac9;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -41,7 +41,7 @@
         }
 
         .cookie-banner button:hover {
-            background-color: #45a049;
+            background-color: aqua;
         }
     </style>
 </head>
@@ -49,12 +49,11 @@
 
     <div class="cookie-banner" id="cookieBanner">
         <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
-           Erfahren Sie mehr in unserer <a href="#" style="color: #4CAF50; text-decoration: underline;">Datenschutzerklärung</a>.</p>
+           Erfahren Sie mehr in unserer <a href="#" style="color: aqua; text-decoration: underline;">Datenschutzerklärung</a>.</p>
         <button onclick="acceptCookies()">Akzeptieren</button>
     </div>
 
     <script>
-        
         function showCookieBanner() {
             const banner = document.getElementById('cookieBanner');
             const cookieAccepted = localStorage.getItem('cookieAccepted');
@@ -64,13 +63,12 @@
             }
         }
 
-        
         function acceptCookies() {
             localStorage.setItem('cookieAccepted', 'true');
             document.getElementById('cookieBanner').style.display = 'none';
+            window.location.href = https//s1app.github.io/Senpai-Schweizer/;
         }
 
-        
         showCookieBanner();
     </script>
 
