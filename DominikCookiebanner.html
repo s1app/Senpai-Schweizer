@@ -50,23 +50,18 @@
     <div class="cookie-banner" id="cookieBanner">
         <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
            Erfahren Sie mehr in unserer <a href="#" style="color: aqua; text-decoration: underline;">Datenschutzerklärung</a>.</p>
-        <button onclick="acceptCookies()">Akzeptieren</button>
+        <button onclick="acceptCookiesAndRedirect()">Akzeptieren</button>
     </div>
 
     <script>
         function showCookieBanner() {
             const banner = document.getElementById('cookieBanner');
-            const cookieAccepted = localStorage.getItem('cookieAccepted');
-
-            if (!cookieAccepted) {
-                banner.style.display = 'block';
-            }
+            banner.style.display = 'block';
         }
 
-        function acceptCookies() {
+        function acceptCookiesAndRedirect() {
             localStorage.setItem('cookieAccepted', 'true');
-            document.getElementById('cookieBanner').style.display = 'none';
-            window.location.href = https//s1app.github.io/Senpai-Schweizer/
+            window.location.href //s1app.github.io/Senpai-Schweizer/
         }
 
         showCookieBanner();
