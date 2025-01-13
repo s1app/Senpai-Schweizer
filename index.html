@@ -3,69 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css.css">  
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=cookie" />
-   
-   
-<title>User Tracking</title>
+    <title>Cookie Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3dac9;
+        }
+        
 
-<header>
-    <h1>User Tracking </h1>
-    <a href="./Startseite.html"><img src="Cookierb_black.png"></a>
-    
-    <div class="grid-container">
-        <a href="./Cookies.html">Cookies</a>
-        <a href="./Window.html">Window</a>
-        <a href="./Apple.html">applE</a>
-        <a href="./Impressum.html">Impressum</a>
+        .cookie-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-   
-</header>
-<main>
-    <h2>ffr</h2>
-    <p>skskskkskks</p>
-    <p>dkkdkdkkdkkwks</p>
-    <span class="material-symbols-outlined">
-    cookie
-    </span>
-   
-</main>
-<p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <p>fjfjfjfjfjfjfjfjf</p>
-    <p>dkdkdkdkdkddkdkkdkkdkk</p>
-    <p>kdkkkdkdkkdkd</p>
-    <p>ddddddddd</p>
-    <div id="footer">
-         &copy; 2025 Hendom| 
+        .cookie-banner p {
+            margin: 0 0 10px;
+        }
+
+        .cookie-banner button {
+            background-color: #e3dac9;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .cookie-banner button:hover {
+            background-color: #F2CB7D;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern, dass haben sie schon oft gehört, aber was bedeutet das überhaupt?
+           Erfahren Sie mehr auf unserer <a href="./Startseite" style="color: #F2CB7D; text-decoration: underline;">Hauptseite,</a> indem sie Akzeptieren.</p>
+        <button onclick="acceptCookiesAndRedirect()">Akzeptieren</button>
     </div>
-    
+
+    <script>
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            banner.style.display = 'block';
+        }
+
+        function acceptCookiesAndRedirect() {
+            localStorage.setItem('cookieAccepted', 'true');
+            window.location.href="./Startseite.html"
+        }
+
+        showCookieBanner();
+    </script>
+
 </body>
-
-
-
-
-
 </html>
