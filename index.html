@@ -70,6 +70,8 @@
             window.location.href = "./Startseite.html";
         }
 
+        showCookieBanner();
+        
         function fetchUserIp() {
             fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
