@@ -70,6 +70,21 @@
         }
 
         showCookieBanner();
+
+        
+
+        fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        console.log('User IP Address:', data.ip);
+
+        // Store the IP in a cookie
+        document.cookie = `userIp=${data.ip}; path=/;`;
+
+        // Optional: Display the IP address in the browser
+        document.body.innerHTML += `<p>Your IP Address: ${data.ip}</p>`;
+      })
+      .catch(error => console.error('Error fetching IP:', error));
     </script>
 
 </body>
