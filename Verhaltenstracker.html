@@ -17,26 +17,46 @@
     <link rel="stylesheet" href="./Css.css">  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=cookie" />
   
-<title>Verhaltenstracker</title>
+<title>Ip-Adresse</title>
 
 <header>
-    <h1>Verhaltenstracker</h1>
+    <h1>Ip Adresse</h1>
     <a href="./Startseite.html"><img src="Cookierb_black.png"></a>
     <div class="grid-container">
         <a href="./Cookies.html">Cookies</a>
         <a href="./Onlinetracker.html">Online-Tracker</a>
         <a href="./Schutz.html">Schutz</a>
-        <a href="./Verhaltenstracker.html">Verhaltenstracker</a>
+        <a href="./Verhaltenstracker.html">Ip-Adresse</a>
         
     </div>
 
    
 </header>
 <main>
+    <h2>ihre ip-adresse</h2>
+    <p>hier möchten wir ihnen ein beispiel geben was getrackt werden könnte
+         bzw. wird wenn sie eine Website besuchen<br>DIe Ip wird zwar nicht von uns gespeichert, denoch ist die ip adresse ein wichtiger indikator für unternehmen </p>
+         <p>Hier steht nun ihre ip adresse:</p>
+         <p id="ip">Wird geladen...</p>
+
+         <script>
+             
+             fetch('https://api.ipify.org?format=json')
+                 .then(response => response.json())
+                 .then(data => {
+                     document.getElementById('ip').textContent = data.ip;
+                 })
+                 .catch(error => {
+                     console.error('Fehler beim Abrufen der IP-Adresse:', error);
+                     document.getElementById('ip').textContent = 'Fehler beim Abrufen.';
+                 });
+         </script>
+     
    
-   
+
 </main>
-<p>fjfjfjfjfjfjfjfjf</p>
+
+
    
     <div id="footer">
         &copy; 2025 <a class="foot" href="./Impressum.html">>Impressum<</a>|Senpai Schweizer
