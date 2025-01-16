@@ -6,6 +6,7 @@
     text-align: center;
     min-height: 0px;
     bottom: 1px;
+    color: #000000;
     
 }
 img{
@@ -30,14 +31,16 @@ body {
     font-size: 30px;
     color: white;
     
-    grid-template-columns: auto auto auto auto ;
+    grid-template-columns: auto auto auto auto;
   }
   a{
     text-decoration: none;
     
+    
   }
   .impressum{
     text-decoration: underline;
+    color: black;
   }
  
   
@@ -46,6 +49,7 @@ body {
     top: 0;
     background-color: #000000;  
     text-align: center; 
+    text-decoration: none;
   }
 
 h1 {
@@ -56,15 +60,16 @@ h1 {
 
 }
 h2{
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
 }
 h3{
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 p{
     text-align: center;
+    font-size: 20px;
   
 }
 
@@ -104,8 +109,10 @@ a{
 form{
   text-align: center;
 }
-a1{
-  text-decoration: underline;
+a.foot{
+  color: #000000;
+  transition: .4s;
 }
-
-
+a.foot:hover{
+ color: gray; 
+}
